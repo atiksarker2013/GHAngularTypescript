@@ -67,12 +67,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="oapp.css" />
     <TypeScriptCompile Include="app\app.config.ts" />
     <TypeScriptCompile Include="app\home\HomeControllers.ts" />
     <TypeScriptCompile Include="app\student\StudentControllers.ts" />
     <TypeScriptCompile Include="app\student\StudentService.ts" />
-    <Content Include="oindex.html" />
     <Content Include="partials\home\home.tpl.html" />
     <Content Include="partials\student\student-entry.tpl.html" />
     <Content Include="partials\student\student-list.tpl.html" />
@@ -98,9 +96,6 @@
     <Content Include="Scripts\typings\angular\index.d.ts" />
     <Content Include="Scripts\typings\jquery\jquery.d.ts" />
     <Content Include="Web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="oapp.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
