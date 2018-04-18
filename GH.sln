@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GH", "GH\GH.csproj", "{2574F603-4B6C-4A30-BFDD-E3BC09EEDFDF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHService", "GHService\GHService.csproj", "{11A0BF50-4966-4E0A-A1CF-B91F3A52BFAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2574F603-4B6C-4A30-BFDD-E3BC09EEDFDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2574F603-4B6C-4A30-BFDD-E3BC09EEDFDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2574F603-4B6C-4A30-BFDD-E3BC09EEDFDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11A0BF50-4966-4E0A-A1CF-B91F3A52BFAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11A0BF50-4966-4E0A-A1CF-B91F3A52BFAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11A0BF50-4966-4E0A-A1CF-B91F3A52BFAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11A0BF50-4966-4E0A-A1CF-B91F3A52BFAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -27,7 +27,7 @@
             };
 
 
-            self.http.post("http://localhost:30285/api/student", student).then(f1, f2);
+            self.http.post("http://localhost:54313/api/Students", student).then(f1, f2);
             return deffered.promise;
         }
 
