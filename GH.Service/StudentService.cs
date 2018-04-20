@@ -37,12 +37,12 @@ namespace GH.Service
             }
 
             students = students.OrderBy(x=>x.Modified);
-            if (request.OrderBy=="Name")
+            if (request.OrderBy.ToLower() =="name")
             {
                 students = request.IsAssending ? students.OrderBy(x => x.Name) : students.OrderByDescending(x => x.Name);
             }
 
-            if (request.OrderBy == "Phone")
+            if (request.OrderBy.ToLower() == "phone")
             {
                 students = request.IsAssending ? students.OrderBy(x => x.Phone) : students.OrderByDescending(x => x.Phone);
             }
