@@ -19,13 +19,37 @@ namespace GH.Service
         }
         public bool Add(Student student)
         {
-            repository = new StudentRepository();
             return repository.Add(student);
         }
 
-        //public List<Student> Search(StudentRequestModel request)
-        //{
-        //    this.repository.
-        //}
+        public List<Student> Search(StudentRequestModel request)
+        {
+            IQueryable<Student> students = this.repository.Get();
+
+            if (!string.IsNullOrEmpty(request.Name))
+            {
+                students = students.Where(x => x.Name.ToLower().Contains(request.Name.ToLower()));
+            }
+
+            if (!string.IsNullOrEmpty(request.Phone))
+            {
+                students = students.Where(x => x.Phone.ToLower().Contains(request.Name.ToLower()));
+            }
+
+            students = students.OrderBy(x=>x.Modified);
+            if (request.OrderBy=="Name")
+            {
+                students = request.IsAssending ? students.OrderBy(x => x.Name) : students.OrderByDescending(x => x.Name);
+            }
+
+            if (request.OrderBy == "Phone")
+            {
+                students = request.IsAssending ? students.OrderBy(x => x.Phone) : students.OrderByDescending(x => x.Phone);
+            }
+
+            students = students.Skip((request.Page-1)*10).Take(request.PerPageCount);
+            List<Student> list = students.ToList();
+            return list;
+        }
     }
 }

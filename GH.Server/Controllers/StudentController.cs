@@ -6,9 +6,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace GH.Server.Controllers
 {
+    [EnableCors(origins: "http://localhost:10202", headers: "*", methods: "*")]
     public class StudentController : ApiController
     {
         public IHttpActionResult Post(Student student)
